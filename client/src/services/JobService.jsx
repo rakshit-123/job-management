@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:5000/api/jobs";
+const API = `${import.meta.env.VITE_BACKEND_URL}/api/jobs`;
 
 export const getJobs = async (filters) => {
   const res = await axios.get(API, { params: filters });
